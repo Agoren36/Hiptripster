@@ -1,11 +1,12 @@
 <div class="jumbotron center">
 	<h1>Welcome to HipTripster!</h1>
+<% if user_signed_in? %>
 
-	<p>Click here to    <%= link_to "Log in", "#", class: "btn btn-primary btn-lg" %>
-		<%= link_to "Sign Up", "#", class: "btn btn-primary btn-lg" %></p>
+<%= link_to "Start Planning", mytrips_path, class: "btn btn-primary btn-large" %> 
+<% else %>
 
-		<script type="text/javascript">
-$.backstretch( "<%= image_path("City View.jpg") %>" );
-</script>
-
+	<p>Click here to    <%= link_to "Log in", new_user_session_path, class: "btn btn-primary btn-lg" %>
+		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+    <% end %>
+		
 </div>

@@ -8,4 +8,7 @@ class PagesController < ApplicationController
   def plan
   end
 
+  def mytrips
+  end
+
 end

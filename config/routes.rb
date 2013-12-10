@@ -1,7 +1,9 @@
 Hiptripster::Application.routes.draw do
+  devise_for :users
   root "pages#home"
   get "about" => "pages#about" # creates about path
   get "plan" => "pages#plan" 
+  get "mytrips" => "pages#mytrips"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
