@@ -2,7 +2,7 @@
 	<h1>Welcome to HipTripster!</h1>
 <% if user_signed_in? %>
 
-<%= link_to "Start Planning", mytrips_path, class: "btn btn-primary btn-large" %> 
+<%= link_to "Start Planning", plan_path, class: "btn btn-primary btn-large" %> 
 <% else %>
 
 	<p>Click here to    <%= link_to "Log in", new_user_session_path, class: "btn btn-primary btn-lg" %>
